@@ -40,6 +40,7 @@ systemctl restart php-fpm.service
 echo -n "安装完成，请打开IP查看网站";echo;
 echo -n "ip/tz.php为探针 ip/adminer.php为数据库管理工具";echo;
 echo -n "安装结束~";echo;
+exit 0;
 }
 uninstall_lnmp(){
     printf "Are you sure uninstall lnmp? (y/n)"
