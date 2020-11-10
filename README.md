@@ -8,6 +8,7 @@
 
 卸载方法：
 `wget https://github.com/4kercc/fastlnmp/raw/main/install.sh && bash install.sh uninstall`
+
 -------------------------------------------------------------------------------------------
 
 再次提醒：仅适用于Centos7.x版本。
