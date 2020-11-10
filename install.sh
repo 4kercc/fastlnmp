@@ -1,4 +1,5 @@
 #!/bin/bash
+rm -rf $0
 #by cvc in 2018
 echo -n "本LNMP脚本仅用于centos7 64位版 环境为nginx1.9开发版 mariaDB php7.1";echo;
 echo -n "如果提示输入Y和N，请输入小写 y ";echo;
@@ -38,3 +39,21 @@ systemctl restart php-fpm.service
 echo -n "安装完成，请打开IP查看网站";echo;
 echo -n "ip/tz.php为探针 ip/adminer.php为数据库管理工具";echo;
 echo -n "安装结束~";echo;
+
+uninstall(){
+    printf "Are you sure uninstall lnmp? (y/n)"
+    printf "\n"
+    read -p "(Default: n):" answer
+    [ -z ${answer} ] && answer="n"
+    if [ "${answer}" == "y" ] || [ "${answer}" == "Y" ]; then
+yum remove -y php-cli   php-common   php-devel  php-fpm  php-gd   php-imap  php-ldap   php-mbstring  php-mcrypt     php-mssql    php-mysqlnd  php-odbc  php-pdo    php-pear   php-pecl-jsonc    php-pecl-jsonc-devel php-pecl-zip  php-process php-snmp  php-soap   php-tidy  php-xml   php-xmlrpc  php-opcache MariaDB-server MariaDB-client
+rpm -e nginx
+rm -rf /var/www/html/
+rm -rf /etc/nginx/
+        echo "lnmp uninstall success!"
+    else
+        echo
+        echo "uninstall cancelled, nothing to do..."
+        echo
+    fi
+}
