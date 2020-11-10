@@ -1,6 +1,7 @@
 #!/bin/bash
 rm -rf $0
 #by cvc in 2018
+install_lnmp(){
 echo -n "本LNMP脚本仅用于centos7 64位版 环境为nginx1.9开发版 mariaDB php7.1";echo;
 echo -n "如果提示输入Y和N，请输入小写 y ";echo;
 echo -n "请输入mysql的root密码:";echo;
@@ -39,7 +40,7 @@ systemctl restart php-fpm.service
 echo -n "安装完成，请打开IP查看网站";echo;
 echo -n "ip/tz.php为探针 ip/adminer.php为数据库管理工具";echo;
 echo -n "安装结束~";echo;
-
+}
 uninstall_lnmp(){
     printf "Are you sure uninstall lnmp? (y/n)"
     printf "\n"
@@ -59,7 +60,7 @@ rm -rf /etc/nginx/
 }
 
 action=$1
-[ -z $1 ] && action=
+[ -z $1 ] && action=install_lnmp
 case "$action" in
     install|uninstall)
         ${action}_lnmp
