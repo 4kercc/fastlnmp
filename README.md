@@ -1,6 +1,6 @@
 # Centos7下快速部署lnmp环境
 主要安装内容：
-`Nginx1.19.0  php7.1  mariadb `
+`Nginx1.19.0  php7.1.33  MariaDB-server-10.1.48 `
 
 安装方法：
 `wget https://github.com/4kercc/fastlnmp/raw/main/install.sh && bash install.sh`
