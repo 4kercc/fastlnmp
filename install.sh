@@ -40,7 +40,7 @@ echo -n "安装完成，请打开IP查看网站";echo;
 echo -n "ip/tz.php为探针 ip/adminer.php为数据库管理工具";echo;
 echo -n "安装结束~";echo;
 
-uninstall(){
+uninstall_lnmp(){
     printf "Are you sure uninstall lnmp? (y/n)"
     printf "\n"
     read -p "(Default: n):" answer
@@ -57,3 +57,14 @@ rm -rf /etc/nginx/
         echo
     fi
 }
+
+action=$1
+[ -z $1 ] && action=
+case "$action" in
+    install|uninstall)
+        ${action}_lnmp
+        ;;
+    *)
+        echo "Usage: `basename $0` [install|uninstall]"
+        ;;
+esac
