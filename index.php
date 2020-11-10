@@ -14,7 +14,7 @@
           <p><li>本页面于/var/www/html/index.php</li></p>
           <p><li>您可以删除或覆盖本页面</li></p>
 		  <p><li><a href="http://4ker.cc">刺客博客</a></li></p><br>
-		<p><li><a href="/tz.php">PHP探针</a></li></p>--<p><li><a href="/adminer.php">adminer数据库管理</a></li></p>
+		<p><a href="/tz.php">PHP探针</a>-<a href="/adminer.php">adminer数据库管理</a></p>
         </div>
 	</div>
 </body>
