@@ -23,7 +23,7 @@ wget -O /etc/nginx/nginx.conf https://github.com/4kercc/fastlnmp/raw/main/nginx.
 wget -O /etc/nginx/conf.d/default.conf https://github.com/4kercc/fastlnmp/raw/main/default.conf
 wget -O /var/www/html/tz.php https://github.com/4kercc/fastlnmp/raw/main/tz.php
 wget -O /var/www/html/adminer.php https://github.com/4kercc/fastlnmp/raw/main/adminer.php
-wget -O /var/www/html/index.php https://github.com/4kercc/fastlnmp/raw/main/1.html
+wget -O /var/www/html/index.php https://github.com/4kercc/fastlnmp/raw/main/index.php
 chown nginx:apache  /var/www/html
 firewall-cmd  --permanent --add-service=http
 firewall-cmd  --permanent --add-service=https
