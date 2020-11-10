@@ -1,5 +1,5 @@
 #!/bin/bash
-rm -rf $0
+#rm -rf $0
 #by cvc in 2018
 install_lnmp(){
 echo -n "本LNMP脚本仅用于centos7 64位版 环境为nginx1.9开发版 mariaDB php7.1";echo;
@@ -60,7 +60,10 @@ rm -rf /etc/nginx/
 }
 
 action=$1
-[ -z $1 ] && action=install_lnmp
+if [ -z "$1" ]
+then
+install_lnmp
+fi
 case "$action" in
     install|uninstall)
         ${action}_lnmp
@@ -69,3 +72,4 @@ case "$action" in
         echo "Usage: `basename $0` [install|uninstall]"
         ;;
 esac
+
