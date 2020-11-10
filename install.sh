@@ -9,7 +9,7 @@ read check
 clear
 echo "请稍等，正在自动处理....."
 sleep 1
-yum install -y install epel-release epel-release.noarch yum-utils wget 
+yum install -y epel-release epel-release.noarch yum-utils wget 
 rpm -Uvh https://github.com/4kercc/fastlnmp/raw/main/remi-release-7.rpm 
 rpm -ivh http://nginx.org/packages/mainline/centos/7/x86_64/RPMS/nginx-1.19.0-1.el7.ngx.x86_64.rpm
 wget -O /etc/yum.repos.d/MariaDB.repo https://github.com/4kercc/fastlnmp/raw/main/MariaDB.repo 
